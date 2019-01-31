@@ -126,6 +126,35 @@ class App(QMainWindow,Ui_MainWindow, ImageViewer):
         self.label_2.setPixmap(QtGui.QPixmap(q))
         if self.l_home >= 1:
             self.label_2.setGeometry(QtCore.QRect(120, 250, 180, 180))
+
+    def new_car(self):
+        if self.count >= 150:
+            self.l_car = 1
+            self.a = 1
+        if self.count >= 500:
+            self.l_car = 2
+            self.a = 2
+        if self.count >= 800:
+            self.l_car = 3
+            self.a = 3
+        if self.count >= 1000:
+            self.l_car = 3
+        q1 = str(self.l_car) + '_bike.png'
+        self.label_3.setPixmap(QtGui.QPixmap(q1))
+        if self.l_car >= 2:
+            self.label_3.setGeometry(QtCore.QRect(300, 320, 120, 120))
+
+    def new_man(self):
+        if self.count >= 150:
+            self.l_man = 1
+        if self.count >= 500:
+            self.l_man = 2
+        if self.count >= 800:
+            self.l_man = 3
+        if self.count >= 1000:
+            self.l_man = 3
+        q2 = str(self.l_man) + "_guy.png"
+        self.label_1.setPixmap(QtGui.QPixmap(q2))
             
  
  
